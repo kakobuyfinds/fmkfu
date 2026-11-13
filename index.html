@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#202c41">
+  <title>HubBuy spreadsheet | Fashion Finds, Sizes &amp; QC Guide</title>
+  <meta name="description" content="Use this independent HubBuy spreadsheet guide to browse CAFANS fashion categories, compare sizes, read QC photos and estimate international delivery costs.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="HubBuy spreadsheet | Fashion Finds, Sizes &amp; QC Guide">
+  <meta property="og:description" content="Browse CAFANS categories and learn what to check in a product listing, a warehouse photo and a shipping quote.">
+  <meta property="og:image" content="https://static.nike.com/a/images/t_default/f_auto,q_auto,w_800/f888b4a3-a02a-420d-93e3-cb33c3bb30ac/AIR+FORCE+1+%2707.png">
+  <!-- Set a self-referencing canonical when the public URL is known.
+    Google blocked direct first-page verification. Supplemental web-search samples
+    informed the topic selection without establishing Google rankings.
+    hubbuy.net, hubbuy-spreadsheet.com, qcradar.com, repgalaxy.tips, hub-buy.com,
+    hubbuy-sheet.com, hubbuy-cn.com, hubbuypicklist.com, mixfittio.com, hubbuyspreadsheety.com
+    Topics compared: product directories, listing links, variant details, warehouse QC and parcel costs.
+  -->
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    :root{color-scheme:light;--ink:#202c41;--muted:#505965;--paper:#f7f3ec;--line:#d6cfc3;--accent:#873b28;--white:#fff}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+    h1,h2,h3,p,figure{margin:0}
+    h1,h2{font-family:Georgia,serif;line-height:1.05;letter-spacing:-.035em}
+    h1{font-size:clamp(2.75rem,7vw,5.85rem);max-width:10ch}
+    h2{font-size:clamp(2rem,4.6vw,3.35rem)}
+    h3{font-size:1.15rem;line-height:1.28}
+    p{max-width:68ch}
+    a{color:inherit;text-underline-offset:.2em}
+    a:focus-visible,summary:focus-visible{outline:3px solid #b55132;outline-offset:4px}
+    .wrap{width:min(72rem,calc(100% - 2rem));margin-inline:auto}
+    header{background:var(--ink);color:var(--white)}
+    header .wrap{padding-block:.75rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .brand{font-weight:850;letter-spacing:.13em;text-decoration:none}
+    .top-link{font-size:.9rem}
+    .categories{padding-block:1.15rem}
+    .categories h2{font:750 .9rem/1.3 system-ui,sans-serif;letter-spacing:0;margin-bottom:.55rem}
+    .categories ul{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.4rem;list-style:none;margin:0;padding:0}
+    .categories a{display:flex;align-items:center;min-height:2.75rem;height:100%;padding:.35rem .65rem;background:var(--white);border:1px solid var(--line);text-decoration:none;font-size:.9rem;font-weight:650;overflow-wrap:anywhere}
+    .categories a:hover{border-color:var(--accent);color:var(--accent)}
+    .hero{display:grid;grid-template-columns:1.15fr .85fr;background:#eae0d2;border:1px solid var(--line)}
+    .hero-copy{padding:clamp(1.3rem,5vw,4rem);align-self:center}
+    .kicker{font-weight:750;color:var(--accent);font-size:.85rem;margin-bottom:.6rem}
+    .hero-copy p:not(.kicker){margin-top:1rem}
+    .button{display:inline-block;margin-top:1.25rem;background:var(--ink);color:var(--white);padding:.65rem 1rem;font-weight:700;text-decoration:none}
+    .button:hover{background:var(--accent)}
+    img{display:block;width:100%;height:auto}
+    .hero figure{display:grid;grid-template-rows:1fr auto;background:#eee}
+    .hero img{height:100%;min-height:0;aspect-ratio:1;object-fit:cover}
+    figcaption{padding:.6rem .8rem;font-size:.86rem;color:var(--muted);background:var(--white)}
+    .section{padding-block:clamp(1.9rem,5vw,3.5rem);border-bottom:1px solid var(--line)}
+    .section>p,.section>h2+div{margin-top:1rem}
+    .gallery{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.7rem;margin-top:1.1rem}
+    .gallery figure{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line)}
+    .gallery img{aspect-ratio:1;object-fit:cover;background:#eee}
+    .guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem}
+    article{background:var(--white);border-top:3px solid var(--accent);padding:1.15rem}
+    article p{margin-top:.6rem}
+    .qa{max-width:52rem;margin-top:1rem}
+    details{border-top:1px solid var(--line);padding:.75rem 0}
+    summary{font-weight:750;cursor:pointer}
+    details p{margin-top:.45rem;padding-left:1.1rem}
+    footer{padding-block:1.5rem 2rem;color:var(--muted);font-size:.9rem}
+    @media(max-width:760px){.categories ul{grid-template-columns:repeat(3,minmax(0,1fr))}.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(max-width:540px){.hero,.guides{grid-template-columns:1fr}.hero img{height:auto;aspect-ratio:5/4}.gallery,.categories ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "HubBuy spreadsheet | Fashion Finds, Sizes & QC Guide",
+        "inLanguage": "en",
+        "description": "Use this independent HubBuy spreadsheet guide to browse CAFANS fashion categories, compare sizes, read QC photos and estimate international delivery costs."
+      },
+      {
+        "@type": "FAQPage",
+        "inLanguage": "en",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a HubBuy spreadsheet?",
+            "acceptedAnswer": {"@type": "Answer", "text": "A HubBuy spreadsheet is a shopping reference that groups product links and may include notes about sizes, variants or quality-control photos. This independent guide explains how to evaluate those entries and links to CAFANS categories."}
+          },
+          {
+            "@type": "Question",
+            "name": "How do I check if a spreadsheet product link is still useful?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Open the current listing and match the product model, selected color and size. If an older agent link fails, look for the original marketplace name and item ID in your saved notes."}
+          },
+          {
+            "@type": "Question",
+            "name": "Can QC photos confirm authenticity?",
+            "acceptedAnswer": {"@type": "Answer", "text": "QC photos can show visible details such as seams, labels and damage. Authenticity requires separate evidence, such as a verifiable purchase record from an authorized seller."}
+          },
+          {
+            "@type": "Question",
+            "name": "Does the listed item price include shipping?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Check what the quote includes. Item price, domestic delivery, service fees, international shipping and destination charges can appear as separate amounts."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/fmkfu/">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="brand" href="https://www.cafans.com">CAFANS</a>
+      <a class="top-link" href="https://www.cafans.com">Open the catalog</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <nav class="categories" aria-labelledby="category-title">
+      <h2 id="category-title">Browse CAFANS by category</h2>
+      <ul>
+        <li><a href="https://cafans.com/category-911-Shoes.html">Shoes</a></li>
+        <li><a href="https://cafans.com/category-912-Hoodies%2FSweaters.html">Hoodies/Sweaters</a></li>
+        <li><a href="https://cafans.com/category-913-T-Shirts.html">T-Shirts</a></li>
+        <li><a href="https://cafans.com/category-914-Jackets.html">Jackets</a></li>
+        <li><a href="https://cafans.com/category-915-Pants%2FShorts.html">Pants/Shorts</a></li>
+        <li><a href="https://cafans.com/category-916-Headwear.html">Headwear</a></li>
+        <li><a href="https://cafans.com/category-917-Sets.html">Sets</a></li>
+        <li><a href="https://cafans.com/category-918-underwear%2Funderpants.html">Underwear/underpants</a></li>
+        <li><a href="https://cafans.com/category-919-Jersey.html">Jersey</a></li>
+        <li><a href="https://cafans.com/category-920-Accessories.html">Accessories</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="kicker">Independent shopping guide</p>
+        <h1 id="page-title">HubBuy spreadsheet</h1>
+        <p>A practical guide to sneaker, streetwear and accessory finds. Start with the CAFANS categories, then compare the exact variant, fit and delivered cost before saving an item to your shortlist.</p>
+        <a class="button" href="https://www.cafans.com">Browse CAFANS finds</a>
+      </div>
+      <figure>
+        <img src="https://static.nike.com/a/images/t_default/f_auto,q_auto,w_800/f888b4a3-a02a-420d-93e3-cb33c3bb30ac/AIR+FORCE+1+%2707.png" width="800" height="800" fetchpriority="high" loading="eager" alt="Nike Air Force 1 ’07 Texture sneaker">
+        <figcaption>Style reference · Nike Air Force 1 ’07 Texture</figcaption>
+      </figure>
+    </section>
+
+    <section class="section" aria-labelledby="style-title">
+      <h2 id="style-title">Fashion references</h2>
+      <p>Use these images to identify a silhouette, material or finish. Check the current listing for the exact item and variant.</p>
+      <div class="gallery">
+        <figure>
+          <img src="https://www.prodirectsport.us/cdn/shop/files/141127_main.jpg?v=1783357190&amp;width=480" width="480" height="480" loading="lazy" decoding="async" alt="Model wearing a dark grey Nike Sportswear Club Fleece hoodie">
+          <figcaption>Nike fleece hoodie</figcaption>
+        </figure>
+        <figure>
+          <img src="https://media.gucci.com/style/DarkGray_Center_0_0_600x600/1709280081/789016_4HBA8_9784_003_100_0000_Light-gg-canvas-baseball-hat.jpg" width="600" height="600" loading="lazy" decoding="async" alt="Model wearing a beige Gucci GG canvas baseball cap">
+          <figcaption>Gucci GG canvas cap</figcaption>
+        </figure>
+        <figure>
+          <img src="https://www.fashionphile.com/cdn/shop/files/3c23586f09b6e1e9cf5f738c46ce7476.jpg?v=1776971082&amp;width=480" width="480" height="480" loading="lazy" decoding="async" alt="Louis Vuitton Speedy 25 bag in brown monogram canvas">
+          <figcaption>Louis Vuitton monogram bag</figcaption>
+        </figure>
+        <figure>
+          <img src="https://cdn-images.buyma.com/imgdata/item/240114/0102577912/593050061/org.jpg" width="1073" height="1073" loading="lazy" decoding="async" alt="Hermès Flagship silk scarf with a nautical print">
+          <figcaption>Hermès silk scarf</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.christiandior.com/is/image/diorprod/E4317WOMZID301_SBG_E01-4?wid=450&amp;hei=500" width="450" height="500" loading="lazy" decoding="async" alt="Dior Clair D Lune earrings with gold-tone CD motifs and crystals">
+          <figcaption>Dior crystal earrings</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="guide-title">
+      <h2 id="guide-title">What to check before ordering</h2>
+      <div class="guides">
+        <article>
+          <h3>HubBuy shoe finds and streetwear sizing</h3>
+          <p>For a sneaker shortlist, save the exact model and colorway. Compare the sneaker size chart with your foot length in centimeters and ask for an insole measurement if you are between sizes. For hoodie fit or T-shirt sizing, lay a piece you own flat and measure chest width, shoulder width and body length.</p>
+          <p>Use sleeve length to compare jacket fit, and check waist and inseam for pants and shorts. For a matching set, confirm whether the top and bottom can be selected separately. For a jersey, compare chest width over the layer you intend to wear underneath.</p>
+        </article>
+        <article>
+          <h3>HubBuy product links and variant checks</h3>
+          <p>Save the original marketplace link and item ID for a Weidian, Taobao or 1688 listing. When you reopen a saved link, check the current seller listing and the size and color selected in the variant menu. A gallery image may show a different variant from the one selected.</p>
+          <p>For a baseball cap, check the head circumference range and strap closure. Compare bag dimensions and strap drop against what you carry. For scarves and jewelry, check scarf dimensions, fiber content, earring dimensions and clasp type.</p>
+        </article>
+        <article>
+          <h3>Warehouse QC photos</h3>
+          <p>Quality-control photos are inspection images. Ask for photos of the specific warehouse item where available. For sneakers, request both outsole views and a heel comparison. For clothing, look at stitching and the care label. For a bag, ask to see the zipper, hardware and lining.</p>
+          <p>If color or finish affects your decision, request a photo under neutral lighting. Check the seller’s return window and any inspection or return fees while you still have time to act.</p>
+        </article>
+        <article>
+          <h3>International shipping estimate</h3>
+          <p>For a useful landed-cost estimate, enter your destination country and postal code. Ask for actual parcel weight and packed dimensions. A carrier may calculate the shipping rate using dimensional weight, especially if you keep bulky shoe boxes.</p>
+          <p>Compare quotes in the same currency, such as USD for the United States, GBP for the United Kingdom or EUR for euro-area destinations. Check which amounts cover domestic delivery, agent service fees, international shipping and any destination duties or taxes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently asked questions</h2>
+      <div class="qa">
+        <details open>
+          <summary>What is a HubBuy spreadsheet?</summary>
+          <p>A HubBuy spreadsheet is a shopping reference that groups product links and may include notes about sizes, variants or quality-control photos. This independent guide explains how to evaluate those entries and links to CAFANS categories.</p>
+        </details>
+        <details open>
+          <summary>How do I check if a spreadsheet product link is still useful?</summary>
+          <p>Open the current listing and match the product model, selected color and size. If an older agent link fails, look for the original marketplace name and item ID in your saved notes.</p>
+        </details>
+        <details open>
+          <summary>Can QC photos confirm authenticity?</summary>
+          <p>QC photos can show visible details such as seams, labels and damage. Authenticity requires separate evidence, such as a verifiable purchase record from an authorized seller.</p>
+        </details>
+        <details open>
+          <summary>Does the listed item price include shipping?</summary>
+          <p>Check what the quote includes. Item price, domestic delivery, service fees, international shipping and destination charges can appear as separate amounts.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>Independent editorial guide with category links to <a href="https://www.cafans.com">CAFANS</a>. Brand images are shown for style reference.</p>
+  </footer>
+</body>
+</html>
